@@ -1,0 +1,12 @@
+html {
+    background-color:azure;
+    font-family: sans-serif;
+}
+
+head {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    align-items: center;
+}
