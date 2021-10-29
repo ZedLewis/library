@@ -1,11 +1,13 @@
+const addBook = document.getElementById('addBook')
+
+
 // the constructor...
 function gamePlayed(title, gametime, genre) {
     this.title = title
     this.gametime = gametime
     this.genre = genre
     this.gameInfo = function() {
-      /* need to implement space in string */
-      return ['You have played ' + genre + '' + title + ' for ' + gametime + ' hours.']
+      return ['You have played ' + genre + ' game ' + title + ' for ' + gametime + ' hours.']
     }
     
   }

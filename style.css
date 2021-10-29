@@ -1,6 +1,10 @@
+/* Having some fun with the styling - western theme, bullet holes? */
+
 html {
-    background-color:azure;
-    font-family: sans-serif;
+    background-color:rgb(243, 241, 193);
+    font-family: "Western";
+    color: red;
+    font-size: 10rem;
 }
 
 head {
@@ -9,4 +13,20 @@ head {
     margin-bottom: 30px;
     font-size: 1.5em;
     align-items: center;
+}
+
+#addBook {
+    font-family: "Western";
+    justify-self: center;
+    align-self: center;
+    color: #ffff; 
+    background-color:rgb(26, 115, 232);
+    border: 1px solid transparent;
+    min-width: 96px; 
+    font-size: 14px;
+    text-align: center;
+    margin-right: 8px; 
+    padding: 9px 1px 9px 1px;
+    border-radius: 5px;
+    text-decoration: none;
 }
