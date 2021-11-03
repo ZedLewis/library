@@ -14,6 +14,7 @@ body {
     display: flex;
     margin-top: 30px;
     width: max-content;
+    height: max-content
     
 }
 
@@ -34,5 +35,10 @@ button {
 button:hover {
     background-color: rgb(216, 8, 8);
     box-shadow: 3px, 3px, 22px, 1px rgb(0, 0, 0, 0.24)
+}
+
+/* working out logistics of styling table so that it is in right place */
+#table {
+    margin-top: 200px;
 }
 

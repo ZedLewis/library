@@ -17,8 +17,8 @@ class UI {
   static displayBooks() {
     const storedGames = [
       {
-        title: 'Football Manager';
-        gametime: '200';
+        title: 'Football Manager',
+        gametime: '200',
         genre: 'Simulation'
       }
     ]
@@ -27,14 +27,25 @@ class UI {
     games.forEach((book) => UI.addBookToList(book))
   }
 
-  static addBookToList(book) {
-    const list = document.querySelector('#gameList')
+  static addGameToList(games) {
+    const list = document.querySelector('#gameList');
+
+    const row = document.createElement('tr');
+
+    row.innerHTML = `
+     <td>${game.title}</td>
+     <td>${game.gametime}</td>
+     <td>${game.genre}</td>
+    `
+    
+    list.appendChild(row);
   }
 }
 
 // Store class
 
 // Event: Display book
+document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
 // Event: Add book
 
