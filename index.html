@@ -14,8 +14,23 @@
 <body>
     <div id="logo">
     Game Library
-    <button id="addGame">Add Game</button>
+    <!-- <button id="addGame">Add Game</button> -->
     </div>
+    <form id="game-form">
+       <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" class="form-input">
+       </div>
+       <div class="form-group">
+        <label for="gameTime">Gametime</label>
+        <input type="text" id="gameTime" class="form-input">
+       </div>
+       <div class="form-group">
+        <label for="genre">Genre</label>
+        <input type="text" id="genre" class="form-input">
+       </div>
+       <input type="submit" id="addGame" value="Add Game" class="button">
+    </form>
     <div id="table">
     <table id="library">
      <tbody id="gameList"> </tbody>

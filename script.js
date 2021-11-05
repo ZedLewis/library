@@ -24,10 +24,10 @@ class UI {
     ]
     const games = storedGames
 
-    games.forEach((book) => UI.addBookToList(book))
+    games.forEach((book) => UI.addGameToList(book))
   }
 
-  static addGameToList(games) {
+  static addGameToList(game) {
     const list = document.querySelector('#gameList');
 
     const row = document.createElement('tr');
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', UI.displayBooks);
 // Event: Remove book
 
 
-  const game1 = new gamePlayed('cod', '200', 'shooter')
+  // const game1 = new gamePlayed('cod', '200', 'shooter')
   
   function addBookToLibrary() {
     // do stuff here

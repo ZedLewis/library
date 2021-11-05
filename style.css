@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    display: flex;
+    
     margin-top: 30px;
     width: max-content;
     height: max-content
@@ -38,7 +38,9 @@ button:hover {
 }
 
 /* working out logistics of styling table so that it is in right place */
-#table {
-    margin-top: 200px;
+table {
+    font-size: 40px;
+    border: 1px solid red;
+
 }
 
