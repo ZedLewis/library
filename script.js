@@ -1,7 +1,7 @@
 const addGame = document.getElementById('addGame')
 
-// Book class
-class book {
+// game class
+class game {
   constructor(title, gametime, genre) {
     this.title = title
     this.gametime = gametime
@@ -14,7 +14,7 @@ class book {
 
 // UI class
 class UI {
-  static displayBooks() {
+  static displayGames() {
     const storedGames = [
       {
         title: 'Football Manager',
@@ -24,7 +24,7 @@ class UI {
     ]
     const games = storedGames
 
-    games.forEach((book) => UI.addGameToList(book))
+    games.forEach((game) => UI.addGameToList(game))
   }
 
   static addGameToList(game) {
@@ -44,17 +44,31 @@ class UI {
 
 // Store class
 
-// Event: Display book
-document.addEventListener('DOMContentLoaded', UI.displayBooks);
+// Event: Display game
+document.addEventListener('DOMContentLoaded', UI.displayGames);
 
-// Event: Add book
+// Event: Add game
+document.querySelector('#game-form').addEventListener('submit', (e) =>
 
-// Event: Remove book
+ {
+   e.preventDefault();
+   const title = document.querySelector('#title').value;
+   const gameTime = document.querySelector('#gameTime').value;
+   const genre = document.querySelector('#genre').value;
+
+   const gameEntry = new game(title, gameTime, genre);
+
+   console.log(gameEntry);
+
+   UI.addGameToList(gameEntry);
+ })
+
+// Event: Remove game
 
 
   // const game1 = new gamePlayed('cod', '200', 'shooter')
   
-  function addBookToLibrary() {
+  function addGameToLibrary() {
     // do stuff here
   }
 

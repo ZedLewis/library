@@ -7,7 +7,7 @@ html {
     background: linear-gradient(to right, rgb(243, 240, 158), rgb(247, 245, 199) );
     font-family: "Western";
     color: red;
-    font-size: 10rem;
+    font-size: 5rem;
 }
 
 body {
@@ -18,7 +18,9 @@ body {
     
 }
 
-button {
+
+
+#addGame {
     font-family: "Western";
     align-self: center;
     color: rgb(243, 241, 193); 
@@ -32,15 +34,22 @@ button {
     margin-left: 250px;
 }
 
-button:hover {
+#addGame:hover {
     background-color: rgb(216, 8, 8);
     box-shadow: 3px, 3px, 22px, 1px rgb(0, 0, 0, 0.24)
 }
 
-/* working out logistics of styling table so that it is in right place */
+/* Next step to style inputs, flex along top of table. */
+
+
 table {
+    
+    margin-left: 5%;
+    margin-top: 100px;
+    min-width: 75ch;
     font-size: 40px;
-    border: 1px solid red;
+    border: 1px dashed black;
+    border-spacing: 5px 10px;
 
 }
 
