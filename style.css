@@ -18,6 +18,11 @@ body {
     
 }
 
+#logo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 
 
 #addGame {
@@ -41,11 +46,31 @@ body {
 
 /* Next step to style inputs, flex along top of table. */
 
+label {
+    font-size: 50px;
+}
+
+input {
+    margin: 15px 0;
+    background-color: cornsilk;
+    padding: 5px 0;
+    font-family: "Western";
+    font-size: 20px;
+    border: 1px solid cornflowerblue;
+    width: 250px;
+    transition: width ease-out;
+    transition-duration: .4s;
+}
+
+input:focus {
+    width: 400px;
+}
+
 
 table {
     
     margin-left: 5%;
-    margin-top: 100px;
+    margin-top: 50px;
     min-width: 75ch;
     font-size: 40px;
     border: 1px dashed black;
