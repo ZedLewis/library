@@ -64,9 +64,6 @@ document.querySelector('#game-form').addEventListener('submit', (e) =>
  })
 
 // Event: Remove game
-
-
-  // const game1 = new gamePlayed('cod', '200', 'shooter')
   
   function addGameToLibrary() {
     // do stuff here

@@ -4,14 +4,13 @@ html {
     /* background-color:rgb(243, 241, 193); */
     cursor: crosshair;
     height: 1000px;
-    background: linear-gradient(to right, rgb(243, 240, 158), rgb(247, 245, 199) );
+    background: linear-gradient(to bottom, rgb(241, 238, 135), rgb(248, 246, 176) );
     font-family: "Western";
-    color: red;
-    font-size: 5rem;
+    color: #B73239;
+    font-size: 6rem;
 }
 
 body {
-    
     margin-top: 30px;
     width: max-content;
     height: max-content
@@ -20,8 +19,16 @@ body {
 
 #logo {
     display: flex;
-    width: 100%;
+    width: 1906px;
     justify-content: center;
+}
+
+img {
+    display: block;
+    margin-left: 100px;
+    margin-top: 0px;
+    max-height: 100px;
+    max-width: 200px;
 }
 
 
@@ -29,14 +36,14 @@ body {
     font-family: "Western";
     align-self: center;
     color: rgb(243, 241, 193); 
-    background-color: red;
+    background-color: #B73239;
     border: 1px solid transparent;
     min-width: 150px; 
+    max-width: 250px;
     font-size: 20px;
     padding: 9px 1px 9px 1px;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 250px;
 }
 
 #addGame:hover {
@@ -48,33 +55,61 @@ body {
 
 label {
     font-size: 50px;
+
 }
 
+#game-form {
+    display: inline-flex;
+    width: 900px;
+    height: auto;
+    margin-left: 200px;
+    
+}
+
+/*need to work out how to fix transition to move right instead of left, may change layout to title the table instead of stack left*/
 input {
     margin: 15px 0;
     background-color: cornsilk;
     padding: 5px 0;
+    margin-top: 1em;
+    margin-right: 300px;
     font-family: "Western";
     font-size: 20px;
     border: 1px solid cornflowerblue;
     width: 250px;
     transition: width ease-out;
     transition-duration: .4s;
+    float: right;
 }
 
 input:focus {
-    width: 400px;
+    width: 300px;
 }
 
 
 table {
-    
-    margin-left: 5%;
+    table-layout: fixed;
+    margin-left: 125px;
     margin-top: 50px;
-    min-width: 75ch;
     font-size: 40px;
     border: 1px dashed black;
     border-spacing: 5px 10px;
+    border-collapse: separate;
+    width: 1500px;
+    
 
 }
 
+
+td:nth-child(1) {
+    width: 50%;
+    padding-left: 60px;
+}
+
+td:nth-child(2) {
+    width: 50%;
+}
+
+td:nth-child(3) {
+    width: 30%; 
+}
