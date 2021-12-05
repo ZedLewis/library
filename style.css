@@ -32,27 +32,6 @@ img {
 }
 
 
-#addGame {
-    font-family: "Western";
-    align-self: center;
-    color: rgb(243, 241, 193); 
-    background-color: #B73239;
-    border: 1px solid transparent;
-    min-width: 150px; 
-    max-width: 250px;
-    font-size: 20px;
-    padding: 9px 1px 9px 1px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#addGame:hover {
-    background-color: rgb(216, 8, 8);
-    box-shadow: 3px, 3px, 22px, 1px rgb(0, 0, 0, 0.24)
-}
-
-/* Next step to style inputs, flex along top of table. */
-
 label {
     font-size: 50px;
 
@@ -77,13 +56,31 @@ input {
     font-size: 20px;
     border: 1px solid cornflowerblue;
     width: 250px;
-    transition: width ease-out;
-    transition-duration: .4s;
     float: right;
 }
 
-input:focus {
-    width: 300px;
+
+#addGame {
+    display: flex;
+    font-family: "Western";
+    justify-content: center;
+    color: rgb(243, 241, 193); 
+    background-color: #B73239;
+    border: 1px solid transparent;
+    min-width: 150px;
+    height: 50px;
+    font-size: 20px;
+    padding: 12px 1px 12px 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 85px;
+    margin-left: -250px;
+
+}
+
+#addGame:hover {
+    background-color: rgb(216, 8, 8);
+    /* box-shadow: 3px, 3px, 22px, 1px rgb(0, 0, 0, 0.24) */
 }
 
 

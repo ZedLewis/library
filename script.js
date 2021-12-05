@@ -48,9 +48,9 @@ class UI {
 document.addEventListener('DOMContentLoaded', UI.displayGames);
 
 // Event: Add game
-document.querySelector('#game-form').addEventListener('submit', (e) =>
+// document.querySelector('#addGame').addEventListener('submit', (e) =>
 
- {
+addGame.addEventListener('click', (e) => {
    e.preventDefault();
    const title = document.querySelector('#title').value;
    const gameTime = document.querySelector('#gameTime').value;
