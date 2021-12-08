@@ -36,9 +36,24 @@ class UI {
      <td>${game.title}</td>
      <td>${game.gametime}</td>
      <td>${game.genre}</td>
+     <td><button class="remove">X</button></td>
     `
     
     list.appendChild(row);
+  }
+
+  // game row abbreiviation. Targetting parent element twice to reach tr, removing entire entry. 
+  // static deleteBook(gr) {
+  //   if(gr.classList.contains('delete')) {
+  //     gr.parentElement.parentElement.remove();
+  //   }
+  // }
+
+  // Used to clear fields once entry is submitted
+  static clearFields() {
+    document.querySelector('#title').value = '';
+    document.querySelector('#gameTime').value = '';
+    document.querySelector('#genre').value = '';
   }
 }
 
@@ -61,9 +76,16 @@ addGame.addEventListener('click', (e) => {
    console.log(gameEntry);
 
    UI.addGameToList(gameEntry);
+
+   // Clear fields 
+   UI.clearFields();
  })
 
 // Event: Remove game
+// document.querySelector('#gameList').addEventListener('click', (e)
+// => {
+//   UI.deleteBook(e.target)
+// })
   
   function addGameToLibrary() {
     // do stuff here

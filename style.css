@@ -75,6 +75,7 @@ input {
     cursor: pointer;
     margin-top: 85px;
     margin-left: -250px;
+    z-index: 1;
 
 }
 
@@ -108,5 +109,17 @@ td:nth-child(2) {
 }
 
 td:nth-child(3) {
-    width: 30%; 
+    width: 28%; 
+}
+
+.remove {
+    cursor: pointer;
+    font-family: "Western";
+    float: right;
+    color: rgb(243, 241, 193); 
+    background-color: #B73239;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    padding: 6px 6px 6px 6px;
+
 }
