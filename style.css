@@ -1,4 +1,3 @@
-/* Having some fun with the styling - western theme, bullet holes? */
 
 html {
     /* background-color:rgb(243, 241, 193); */
@@ -59,7 +58,6 @@ input {
     float: right;
 }
 
-
 #addGame {
     display: flex;
     font-family: "Western";
@@ -84,7 +82,6 @@ input {
     /* box-shadow: 3px, 3px, 22px, 1px rgb(0, 0, 0, 0.24) */
 }
 
-
 table {
     table-layout: fixed;
     margin-left: 125px;
@@ -97,7 +94,6 @@ table {
     
 
 }
-
 
 td:nth-child(1) {
     width: 50%;
@@ -121,5 +117,8 @@ td:nth-child(3) {
     border-radius: 5px;
     border: 1px solid transparent;
     padding: 6px 6px 6px 6px;
+}
 
+.remove:hover {
+    background-color: rgb(216, 8, 8);
 }

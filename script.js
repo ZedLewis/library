@@ -43,11 +43,9 @@ class UI {
   }
 
   // game row abbreiviation. Targetting parent element twice to reach tr, removing entire entry. 
-  // static deleteBook(gr) {
-  //   if(gr.classList.contains('delete')) {
-  //     gr.parentElement.parentElement.remove();
-  //   }
-  // }
+  static deleteBook(gr) {
+      gr.parentElement.parentElement.remove();
+  }
 
   // Used to clear fields once entry is submitted
   static clearFields() {
@@ -62,8 +60,6 @@ class UI {
 // Event: Display game
 document.addEventListener('DOMContentLoaded', UI.displayGames);
 
-// Event: Add game
-// document.querySelector('#addGame').addEventListener('submit', (e) =>
 
 addGame.addEventListener('click', (e) => {
    e.preventDefault();
@@ -73,26 +69,24 @@ addGame.addEventListener('click', (e) => {
 
    const gameEntry = new game(title, gameTime, genre);
 
-   console.log(gameEntry);
+   // Check entry
 
-   UI.addGameToList(gameEntry);
+   if(title === ''|| gameTime === '' || genre === '') {
+     alert('Please provide an input')
+   } else {
+    UI.addGameToList(gameEntry);
+   }
 
    // Clear fields 
    UI.clearFields();
  })
 
 // Event: Remove game
-// document.querySelector('#gameList').addEventListener('click', (e)
-// => {
-//   UI.deleteBook(e.target)
-// })
+document.querySelector('#gameList').addEventListener('click', (e) => {
+  UI.deleteBook(e.target)
+})
   
   function addGameToLibrary() {
     // do stuff here
   }
 
-  addGame.addEventListener('click', () => {
-      
-      console.log("clicked")
-    })
-  
