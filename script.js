@@ -12,18 +12,12 @@ class game {
   }
 }
 
+
 // UI class
 class UI {
   static displayGames() {
-    const storedGames = [
-      {
-        title: 'Football Manager',
-        gametime: '200',
-        genre: 'Simulation'
-      }
-    ]
+    const storedGames = Store.getGames();
     const games = storedGames
-
     games.forEach((game) => UI.addGameToList(game))
   }
 
@@ -37,13 +31,13 @@ class UI {
      <td>${game.gametime}</td>
      <td>${game.genre}</td>
      <td><button class="remove">X</button></td>
-    `
-    
+    ` //this line is storing to local storage
+    localStorage.setItem("game", JSON.stringify(game));
     list.appendChild(row);
   }
 
   // game row abbreiviation. Targetting parent element twice to reach tr, removing entire entry. 
-  static deleteBook(gr) {
+  static deleteGame(gr) {
       gr.parentElement.parentElement.remove();
   }
 
@@ -56,6 +50,36 @@ class UI {
 }
 
 // Store class
+
+// changing name seems to stop faults (titles), but still not storing in local storage. 
+class Store {
+  static getGames() {
+    let titles;
+    if(localStorage.getItem('titles') === null) {
+      titles = [];
+    } else {
+      titles = JSON.parse(localStorage.getItem('titles'));
+    }
+    return titles;
+  }
+
+  static addGame() {
+    const games = Store.getGames();
+    console.log(game) //ERROR - Stringify not working?
+    localStorage.setItem('games', JSON.stringify(games));
+
+    games.push(game);
+
+    
+
+  }
+
+  static removeGame() {
+    const games = Store.getGames();
+    games.forEach()
+
+  }
+}
 
 // Event: Display game
 document.addEventListener('DOMContentLoaded', UI.displayGames);
@@ -72,10 +96,12 @@ addGame.addEventListener('click', (e) => {
    // Check entry
 
    if(title === ''|| gameTime === '' || genre === '') {
-     alert('Please provide an input')
+    //  alert('Please provide an input') - Decided not to use DOM to display error message
    } else {
     UI.addGameToList(gameEntry);
    }
+
+   Store.addGame(game);
 
    // Clear fields 
    UI.clearFields();
@@ -83,7 +109,7 @@ addGame.addEventListener('click', (e) => {
 
 // Event: Remove game
 document.querySelector('#gameList').addEventListener('click', (e) => {
-  UI.deleteBook(e.target)
+  UI.deleteGame(e.target)
 })
   
   function addGameToLibrary() {
